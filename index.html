@@ -16,42 +16,42 @@
 <body>
   <div class="container">
     <ul class="access-skip-links">
-      <li><a aria-label="Skip to main navigation link" href="#nav">Skip to the main navigation</a></li>
-      <li><a aria-label="Skip to main link" href="#main">Skip to the main content</a></li>
+    <li><a aria-label="Skip to navigation" href="#nav">Skip to the navigation</a></li>
+      <li><a aria-label="Skip to main content" href="#main">Skip to the main content</a></li>
     </ul>
-    <header role="banner" class="site-header">
+    <header class="site-header" role="banner">
       <h1>Jam Box Studios</h1>
-      <nav role="navigation" class="main-nav" id="nav">
+      <nav class="main-nav" id="nav" role="navigation">
         <ul>
-          <li><a aria-label="Brings you to home page link" href="#">Home</a></li>
-          <li><a aria-label="Got to Products page link" href="#">Products</a></li>
-          <li><a aria-label="Got to Reservation page link" href="#">Reservation</a></li>
-          <li><a aria-label="Got to Studio page link" href="#">Studio</a></li>
+          <li><a role="button" aria-label="Home page" href="#">Home</a></li>
+          <li><a role="button" aria-label="Products page" href="#">Products</a></li>
+          <li><a role="button" aria-label="Reservation page" href="#">Reservation</a></li>
+          <li><a role="button" aria-label="Studio page" href="#">Studio</a></li>
         </ul>
       </nav>
-      <img src="https://placekitten.com/1200/900" class="banner" alt="Picture of a cat" aria-details="Picture of an adorable feline">
+      <img src="https://placekitten.com/1200/900" class="banner" alt="Picture of a cat" role="img" aria-details="main">
     </header>
-    <main class="main-content" id="main">
+    <main class="main-content" id="main" role="main">
       <h1>Welcome to Jam Box</h1>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
-      <section class="owner">
+      <section class="owner" role="contentinfo">
         <h1>Meet the owner</h1>
-        <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
-          <li>Email: johnjoe@jambox.ca</li>
-          <li>Phone: 613-000-0000</li>
+        <ul itemscope itemtype="https://schema.org/Person">
+          <li itemprop="name">Name: John Doe</li>
+          <li itemprop="jobTitle">Title: CEO</li>
+          <li itemprop="email">Email: johnjoe@jambox.ca</li>
+          <li itemprop="telephone">Phone: 613-000-0000</li>
         </ul>
         <h1>Address</h1>
-        <p>
-          Jambox Studios
-          123 Guitar Road,
-          Musicville, Danceistan
-          B3T 0L0
+        <p itemscope="address" itemtype="https://schema.org/PostalAddress">
+          <span>Jambox Studios</span>
+          <span itemprop="streetAddress">123 Guitar Road,</span>
+          <span itemprop="addressLocality">Musicville,</span> <span itemprop="addressCountry">Danceistan</span>
+          <span intemprop="postalCode">B3T 0L0</span>
         </p>
       </section>
-      <section class="contact-section">
+      <section class="contact-section" role="form">
         <h1>Contact Us</h1>
         <form action="thanks.html">
           <label for="name">Full Name</label>
@@ -62,11 +62,11 @@
           <input type="text" id="subject" name="subject" placeholder="Subject">
           <b>Your Message</b>
           <textarea></textarea>
-          <button type="submit">Send</button>
+          <button type="submit" role="button">Send</button>
         </form>
       </section>
     </main>
-    <footer class="site-footer">
+    <footer class="site-footer" role="contentinfo">
       &copy; 2021 Jam Box Studios
     </footer>
   </div>
