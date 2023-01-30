@@ -13,8 +13,11 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 
+<!-- Add ARIA roles which provide semantic meaning to content, allowing screen readers 
+  and other tools to present and support interaction with object -->
 <body>
   <div class="container">
+    <!-- add skip link for accessibility -->
     <ul class="access-skip-links">
     <li><a aria-label="Skip to navigation" href="#nav">Skip to the navigation</a></li>
       <li><a aria-label="Skip to main content" href="#main">Skip to the main content</a></li>
@@ -36,6 +39,7 @@
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
       <section class="owner" role="contentinfo">
+        <!-- Add Schema improving the way search engines read and represent your page -->
         <h1>Meet the owner</h1>
         <ul itemscope itemtype="https://schema.org/Person">
           <li itemprop="name">Name: John Doe</li>
@@ -53,6 +57,7 @@
       </section>
       <section class="contact-section" role="form">
         <h1>Contact Us</h1>
+        <!-- Add label for an input filed helping accessibility ie.: hit area  -->
         <form action="thanks.html">
           <label for="name">Full Name</label>
           <input type="text" id="name" name="name" placeholder="Full Name">

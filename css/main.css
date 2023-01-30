@@ -1,8 +1,20 @@
+/* ************************************************************* */
+/* Accessible Me CSS */
+/* ************************************************************* */
+
+/* ************************************************************* */
+/* Goals
+    1- Fix any contrast issues
+    2- Improve the user experience
+    3- Improve design
+*/
+/* ************************************************************* */
+
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  /* Reasonable Colors (4.5:1) color shade difference */
-  background-color: var(--color-pink-2);
-  color: var(--color-aquamarine-6);
+  /* Reasonable Colors (3:1) color shade contrast ratio */
+  background-color: var(--color-powder-4);
+  color: var(--color-powder-4);
   margin: 0;
   padding: 0;
 }
@@ -14,11 +26,14 @@ h4,
 h5,
 h6 {
   font-family: 'Stick No Bills', 'Roboto', Helvetica, sans-serif;
-  /* Reasonable Colors (4.5:1) color shade difference */
-  color: var(--color-aquamarine-6);
+  /* Reasonable Colors (3:1) color shade contrast ratio */
+  color: var(--color-powder-4);
+  padding: 1rem 0 0 0;
 }
 
 .container {
+  /* Reasonable Colors (3:1) color shade contrast ratio */
+  background-color: var(--color-pink-2);
   max-width: 1080px;
   margin: 0 auto;
   padding: 0 1rem;
@@ -28,26 +43,35 @@ img {
   width: 100%;
 }
 
-/* skip links styling for accessibility */
+/* ************************************************************* */
+/* Skip button styling */
+/* ************************************************************* */
+/* this will improve the user experience and accessibility */
 .access-skip-links {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 .access-skip-links a {
   position: absolute;
   top: -3em;
-  /* Reasonable Colors (4.5:1) color shade difference */
-  background-color: var(--color-aquamarine-6);
+  /* Reasonable Colors (7:1) color shade contrast ratio */
+  background-color: var(--color-powder-6);
   color: var(--color-pink-2);
   padding: .5em 1em;
   font-weight: bold;
 }
+
 .access-skip-links a:focus {
   top: 0;
   left: 70%;
 }
 
+/* ************************************************************* */
+/* Navigation styling */
+/* ************************************************************* */
+/* add focus and hover styling to help the user experience and accessibility */
 .main-nav ul {
   list-style: none;
   display: flex;
@@ -63,12 +87,12 @@ img {
 
 .main-nav ul li:hover {
   color: white;
-  background-color: var(--color-pink-4);
+  background-color: var(--color-powder-4);
 }
 
 .main-nav ul li a:focus {
   color: white;
-  background-color: var(--color-pink-4);
+  background-color: var(--color-powder-4);
 }
 
 .main-nav ul li a {
@@ -82,7 +106,7 @@ img {
 form input,
 form textarea {
   display: block;
-  width: 100%;
+  width: 96.5%;
   margin-bottom: 1rem;
   padding: .5rem 1rem;
 }
@@ -95,11 +119,12 @@ form textarea {
 }
 
 form button {
-  background: none;
-  /* Reasonable Colors (4.5:1) color shade difference */
-  border: 2px solid var(--color-aquamarine-6);
+  /* background: none; */
+  /* Reasonable Colors (3:1) color shade contrast ratio */
+  border: 2px solid var(--color-powder-4);
   padding: 1rem;
   text-transform: uppercase;
+  color:var(--color-powder-4);
 }
 
 .site-footer {
